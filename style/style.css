@@ -38,15 +38,37 @@ body {
     flex-direction: column;
 }
 
+@media (min-width: 1500px) {
+    .card {
+        flex-direction: row;
+        width: 70%;
+    }
+}
+
 .card__info {
     text-align: center;
     padding: 1.5rem;
     order: 2;
 }
 
+@media (min-width: 1500px) {
+    .card__info {
+        order: 1;
+        text-align: left;
+        padding: 4rem;
+    }
+}
+
 .card__title {
     font-family: var(--font-title);
     margin: 20px 5px;
+}
+
+@media (min-width: 1500px) {
+    .card__title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .card__title--accent {
@@ -62,6 +84,21 @@ body {
     width: 100%;
     order: 1;
     border-radius: 10px 10px 0 0;
+}
+
+@media (min-width: 1500px) {
+    .card__image {
+        order: 2;
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+@media (min-width: 1500px) {
+    .card__stats {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+    }
 }
 
 .stats__info {
