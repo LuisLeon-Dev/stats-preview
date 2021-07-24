@@ -3,3 +3,141 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --font-title: 'Inter', sans-serif;
+    --font-content: 'Lexend Deca', sans-serif;
+    --color-white: hsl(0, 0%, 100%);
+    --color-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --color-transparent-white-stats: hsla(0, 0%, 100%, 0.6);
+}
+
+html,
+body {
+    font-size: 15px;
+    color: var(--color-white);
+    font-family: var(--font-content);
+}
+
+.container {
+    background-color: var(--main-background);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--card-background);
+    width: 90%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1500px) {
+    .card {
+        flex-direction: row;
+        width: 70%;
+    }
+}
+
+.card__info {
+    text-align: center;
+    padding: 1.5rem;
+    order: 2;
+}
+
+@media (min-width: 1500px) {
+    .card__info {
+        order: 1;
+        text-align: left;
+        padding: 4rem;
+    }
+}
+
+.card__title {
+    font-family: var(--font-title);
+    margin: 20px 5px;
+}
+
+@media (min-width: 1500px) {
+    .card__title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 1800px) {
+    .card__title {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.card__title--accent {
+    color: var(--accent);
+}
+
+.card__content {
+    color: var(--color-transparent-white);
+    font-size: 16px;
+}
+
+@media (min-width: 1800px) {
+    .card__content {
+        font-size: 25px;
+        margin-bottom: 2rem;
+    }
+}
+
+.card__image {
+    width: 100%;
+    order: 1;
+    border-radius: 10px 10px 0 0;
+}
+
+@media (min-width: 1500px) {
+    .card__image {
+        order: 2;
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+@media (min-width: 1500px) {
+    .card__stats {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+    }
+}
+
+.stats__info {
+    margin-top: 20px;
+}
+
+.info__num {
+    font-family: var(--font-title);
+    font-size: 23px;
+    font-weight: 700;
+}
+
+@media (min-width: 1800px) {
+    .info__num {
+        font-size: 2.5rem;
+    }
+}
+
+.info__name {
+    text-transform: uppercase;
+    color: var(--color-transparent-white-stats);
+}
+
+@media (min-width: 1800px) {
+    .info__name {
+        font-size: 25px
+    }
+}
