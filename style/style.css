@@ -71,6 +71,13 @@ body {
     }
 }
 
+@media (min-width: 1800px) {
+    .card__title {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
 .card__title--accent {
     color: var(--accent);
 }
@@ -78,6 +85,13 @@ body {
 .card__content {
     color: var(--color-transparent-white);
     font-size: 16px;
+}
+
+@media (min-width: 1800px) {
+    .card__content {
+        font-size: 25px;
+        margin-bottom: 2rem;
+    }
 }
 
 .card__image {
@@ -111,7 +125,19 @@ body {
     font-weight: 700;
 }
 
+@media (min-width: 1800px) {
+    .info__num {
+        font-size: 2.5rem;
+    }
+}
+
 .info__name {
     text-transform: uppercase;
     color: var(--color-transparent-white-stats);
+}
+
+@media (min-width: 1800px) {
+    .info__name {
+        font-size: 25px
+    }
 }
